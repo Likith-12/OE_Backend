@@ -169,6 +169,7 @@ def upload_students(current_user,role):
     #upload file to db
     try:
         students_df.drop(['sl_no', 'admission_year', 'FA_name'], axis=1, inplace=True)
+        students_df['semester'] = students_df['semester'].astype(int) + 1
         
         #removing existing data
         students = Student.query.all()
