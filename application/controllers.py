@@ -55,7 +55,7 @@ def login():
         return jsonify({'error':'token not valid'}),400
     
     #check if user is an admin
-    if token_data['email'] == 'adithyan_b200755cs@nitc.ac.in':
+    if token_data['email'] == 'dao@nitc.ac.in':
         user_data = {}
         user_data['role'] = 'admin'
         user_data['name'] = token_data['name']
